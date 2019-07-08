@@ -16,5 +16,15 @@ namespace COMP123_S2019_Lesson9C
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
