@@ -21,15 +21,7 @@ namespace COMP123_S2019_Lesson9C
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
+   
 
         /// <summary>
         /// This is a shared event handler for the Calculatorutton click event
