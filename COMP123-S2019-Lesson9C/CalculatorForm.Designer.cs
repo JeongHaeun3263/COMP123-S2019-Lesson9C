@@ -45,6 +45,7 @@
             this.DecimalButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BackspaceButton = new System.Windows.Forms.Button();
+            this.ClearButton = new System.Windows.Forms.Button();
             this.CalculatorButtonTableLayourPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -66,10 +67,11 @@
             this.CalculatorButtonTableLayourPanel.Controls.Add(this.EightButton, 1, 1);
             this.CalculatorButtonTableLayourPanel.Controls.Add(this.SevenButton, 0, 1);
             this.CalculatorButtonTableLayourPanel.Controls.Add(this.ResultLabel, 0, 0);
-            this.CalculatorButtonTableLayourPanel.Controls.Add(this.DoneButton, 3, 4);
             this.CalculatorButtonTableLayourPanel.Controls.Add(this.DecimalButton, 2, 4);
             this.CalculatorButtonTableLayourPanel.Controls.Add(this.ZeroButton, 0, 4);
             this.CalculatorButtonTableLayourPanel.Controls.Add(this.BackspaceButton, 3, 1);
+            this.CalculatorButtonTableLayourPanel.Controls.Add(this.ClearButton, 3, 2);
+            this.CalculatorButtonTableLayourPanel.Controls.Add(this.DoneButton, 3, 3);
             this.CalculatorButtonTableLayourPanel.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.CalculatorButtonTableLayourPanel.Location = new System.Drawing.Point(13, 137);
             this.CalculatorButtonTableLayourPanel.Name = "CalculatorButtonTableLayourPanel";
@@ -256,12 +258,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DoneButton.BackColor = System.Drawing.Color.SeaGreen;
-            this.DoneButton.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.DoneButton.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.DoneButton.ForeColor = System.Drawing.Color.White;
-            this.DoneButton.Location = new System.Drawing.Point(210, 219);
+            this.DoneButton.Location = new System.Drawing.Point(210, 165);
             this.DoneButton.Name = "DoneButton";
-            this.DoneButton.Size = new System.Drawing.Size(64, 52);
+            this.CalculatorButtonTableLayourPanel.SetRowSpan(this.DoneButton, 2);
+            this.DoneButton.Size = new System.Drawing.Size(64, 106);
             this.DoneButton.TabIndex = 12;
+            this.DoneButton.Tag = "done";
             this.DoneButton.Text = "Done";
             this.DoneButton.UseVisualStyleBackColor = false;
             this.DoneButton.Click += new System.EventHandler(this.button1_Click);
@@ -277,6 +281,7 @@
             this.DecimalButton.Name = "DecimalButton";
             this.DecimalButton.Size = new System.Drawing.Size(63, 52);
             this.DecimalButton.TabIndex = 13;
+            this.DecimalButton.Tag = "decimal";
             this.DecimalButton.Text = ".";
             this.DecimalButton.UseVisualStyleBackColor = false;
             // 
@@ -302,9 +307,27 @@
             this.BackspaceButton.Name = "BackspaceButton";
             this.BackspaceButton.Size = new System.Drawing.Size(64, 48);
             this.BackspaceButton.TabIndex = 2;
+            this.BackspaceButton.Tag = "back";
             this.BackspaceButton.UseCompatibleTextRendering = true;
             this.BackspaceButton.UseVisualStyleBackColor = false;
             this.BackspaceButton.Click += new System.EventHandler(this.CalculatorButton_Click);
+            // 
+            // ClearButton
+            // 
+            this.ClearButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ClearButton.BackColor = System.Drawing.Color.Orange;
+            this.ClearButton.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ClearButton.ForeColor = System.Drawing.Color.White;
+            this.ClearButton.Location = new System.Drawing.Point(210, 111);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(64, 48);
+            this.ClearButton.TabIndex = 12;
+            this.ClearButton.Tag = "clear";
+            this.ClearButton.Text = "Clear";
+            this.ClearButton.UseVisualStyleBackColor = false;
+            this.ClearButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // CalculatorForm
             // 
@@ -340,6 +363,7 @@
         private System.Windows.Forms.Button DecimalButton;
         private System.Windows.Forms.Button BackspaceButton;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button ClearButton;
     }
 }
 
