@@ -44,9 +44,8 @@
             this.BackspaceButton = new System.Windows.Forms.Button();
             this.ClearButton = new System.Windows.Forms.Button();
             this.DoneButton = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.HeightLabel = new System.Windows.Forms.Label();
             this.NumberButtonTableLayourPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // NumberButtonTableLayourPanel
@@ -331,30 +330,37 @@
             this.DoneButton.UseVisualStyleBackColor = false;
             this.DoneButton.Click += new System.EventHandler(this.CalculatorButton_Click);
             // 
-            // pictureBox1
+            // HeightLabel
             // 
-            this.pictureBox1.BackgroundImage = global::COMP123_S2019_Lesson9C.Properties.Resources.backgroundimage1;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(274, 109);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.HeightLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.HeightLabel.BackColor = System.Drawing.Color.White;
+            this.HeightLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.HeightLabel.Font = new System.Drawing.Font("Arial", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.HeightLabel.Location = new System.Drawing.Point(19, 34);
+            this.HeightLabel.Name = "HeightLabel";
+            this.HeightLabel.Size = new System.Drawing.Size(204, 63);
+            this.HeightLabel.TabIndex = 1;
+            this.HeightLabel.Tag = "height";
+            this.HeightLabel.Text = "0";
+            this.HeightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.HeightLabel.Click += new System.EventHandler(this.HeightLabel_Click);
             // 
             // CalculatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(314, 590);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.NumberButtonTableLayourPanel);
+            this.Controls.Add(this.HeightLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "CalculatorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator Form";
+            this.Load += new System.EventHandler(this.CalculatorForm_Load);
             this.NumberButtonTableLayourPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -376,8 +382,8 @@
         private System.Windows.Forms.Button DoneButton;
         private System.Windows.Forms.Button DecimalButton;
         private System.Windows.Forms.Button BackspaceButton;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button ClearButton;
+        private System.Windows.Forms.Label HeightLabel;
     }
 }
 
